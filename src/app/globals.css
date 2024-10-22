@@ -7,6 +7,19 @@
   --foreground: #171717;
 }
 
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #223354;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -15,8 +28,6 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +35,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.clip-triangle {
+  position: relative;
+  clip-path: polygon(63% 6%, 100% 0, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 7%);
+}
+
+.clip-triangle-them-white {
+  clip-path: polygon(65% 0, 100% 0, 100% 60%, 100% 100%, 16% 100%, 0 88%, 0 0);
 }
